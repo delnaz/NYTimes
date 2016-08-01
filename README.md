@@ -43,7 +43,7 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![alt tag](https://github.com/delnaz/NYTimes/blob/master/codepathNYTimes1.gif)
+![alt tag](https://github.com/delnaz/NYTimes/blob/master/codepathNYTimes.gif)
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
