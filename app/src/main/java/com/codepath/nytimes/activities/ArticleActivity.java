@@ -1,8 +1,11 @@
 package com.codepath.nytimes.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -33,5 +36,32 @@ public class ArticleActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_share, menu);
+        MenuItem item = menu.findItem(R.id.menu_item_share);
+
+
+        item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                shareIntent.setType("text/plain");
+                // get reference to WebView
+                WebView wvArticle = (WebView) findViewById(R.id.wvArticle);
+                // pass in the URL currently being used by the WebView
+                shareIntent.putExtra(Intent.EXTRA_TEXT, wvArticle.getUrl());
+                startActivity(shareIntent);
+                return true;
+            }
+        });
+
+
+        return super.onCreateOptionsMenu(menu);
+
+    }
+
 
 }
