@@ -14,6 +14,6 @@
     <item android:id="@+id/action_filter"
           android:orderInCategory="6"
           android:title="Filter"
-          android:icon="@android:drawable/ic_menu_sort_by_size"
+          android:icon="@drawable/ic_filter_list_36px"
           app:showAsAction="always"/>
 </menu>
