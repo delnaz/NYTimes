@@ -89,9 +89,10 @@ public class SearchActivity extends AppCompatActivity implements FilterFragment.
 
                 return true;
             }
-
             @Override
             public boolean onQueryTextChange(String newText) {
+                searchQuery = newText;
+                Log.d("2222", "query" + searchQuery);
                 return false;
             }
         });
@@ -116,13 +117,9 @@ public class SearchActivity extends AppCompatActivity implements FilterFragment.
         filterFragment.show(fm, "filters_fragment");
     }
 
-
-
-
     public void onArticleSearch(int page){
 
-        Log.d("2222", "Utils.isNetworkAvailable(this): " + Utils.isNetworkAvailable(this));
-        if(Utils.isOnline()) {
+        if(Utils.isNetworkAvailable(this)) {
 
             AsyncHttpClient client = new AsyncHttpClient();
 
