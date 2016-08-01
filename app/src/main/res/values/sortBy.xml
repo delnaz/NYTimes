@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sortBy">
+
+        <item>Relevance</item>
+        <item>Oldest</item>
+        <item>Newest</item>
+    </string-array>
+</resources>
